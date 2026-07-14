@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrocerEasy - Fresh Groceries Delivered</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Grocer<span>Easy</span></div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search for products...">
+    <button onclick="searchProducts()">Search</button>
+  </div>
+  <div class="header-actions">
+    <a href="cart.html">🛒 Cart<span class="cart-count" id="cartCount">0</span></a>
+    <a href="orders.html">My Orders</a>
+    <span id="authLink"></span>
+  </div>
+</header>
+
+<div class="banner">
+  <h1>Fresh Groceries, Delivered Fast</h1>
+  <p>Fruits, vegetables, dairy & daily essentials at your doorstep</p>
+</div>
+
+<div class="main-layout">
+  <div class="sidebar">
+    <h3>Categories</h3>
+    <ul id="categoryList">
+      <li class="active" data-category="">All Products</li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h2 id="sectionTitle">All Products</h2>
+    <div class="product-grid" id="productGrid">
+      <!-- products injected by JS -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 GrocerEasy. Built with Node.js + Express + MongoDB.
+</footer>
+
+<script src="js/auth.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

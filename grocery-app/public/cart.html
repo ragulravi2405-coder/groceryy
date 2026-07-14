@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Cart - GrocerEasy</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">Grocer<span>Easy</span></a>
+  <div class="header-actions">
+    <a href="index.html">Home</a>
+    <a href="orders.html">My Orders</a>
+    <span id="authLink"></span>
+  </div>
+</header>
+
+<div class="cart-wrapper">
+  <h2 style="margin-bottom:16px;">My Cart</h2>
+  <div id="message" class="message"></div>
+  <div id="cartItems"></div>
+
+  <div class="cart-summary" id="cartSummary" style="display:none;">
+    <h3><span>Total</span> <span id="cartTotal">₹0</span></h3>
+    <input type="text" id="address" placeholder="Enter delivery address">
+    <button onclick="placeOrder()">Place Order</button>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 GrocerEasy. Built with Node.js + Express + MongoDB.
+</footer>
+
+<script src="js/auth.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
