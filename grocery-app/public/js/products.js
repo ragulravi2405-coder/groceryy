@@ -50,8 +50,9 @@ function renderProducts(products) {
     const hasDiscount = p.discountPrice && p.discountPrice < p.price;
     const card = document.createElement("div");
     card.className = "product-card";
+    const imgUrl = p.image && p.image.startsWith('http') ? p.image : `images/products/${p.image || 'placeholder.jpg'}`;
     card.innerHTML = `
-      <img src="images/products/${p.image}" alt="${p.name}" onerror="this.src='images/products/placeholder.jpg'">
+      <img src="${imgUrl}" alt="${p.name}" onerror="this.src='images/products/placeholder.jpg'">
       <h4>${p.name}</h4>
       <div class="unit">${p.unit}</div>
       <div class="price">

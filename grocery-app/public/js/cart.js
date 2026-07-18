@@ -39,8 +39,9 @@ function renderCart(items) {
 
     const div = document.createElement("div");
     div.className = "cart-item";
+    const imgUrl = p.image && p.image.startsWith('http') ? p.image : `images/products/${p.image || 'placeholder.jpg'}`;
     div.innerHTML = `
-      <img src="images/products/${p.image}" alt="${p.name}" onerror="this.src='images/products/placeholder.jpg'">
+      <img src="${imgUrl}" alt="${p.name}" onerror="this.src='images/products/placeholder.jpg'">
       <div class="cart-item-info">
         <h4>${p.name}</h4>
         <div class="unit">${p.unit} • ₹${price}</div>
